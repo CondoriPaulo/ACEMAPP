@@ -29,7 +29,7 @@ def _extract_bytes(req: func.HttpRequest) -> bytes:
     return body
 
 
-@app.route(route="ingest/acemapp", methods=["POST"])
+@app.route(methods=["POST"])
 def ingest_acemapp(req: func.HttpRequest) -> func.HttpResponse:
     """
     Receive an ACEMAPP Excel file, clean it, and return JSON for Logic App → SQL.
